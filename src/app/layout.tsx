@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg", // You'll need to create and add this image
+        url: "https://avatars.githubusercontent.com/u/3215078",
         width: 1200,
         height: 630,
         alt: "Bogdan Stanga - Software Engineering, Leadership and AI",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     description:
       "Experienced tech lead sharing insights on software engineering, leadership, and LLMs.",
     creator: "@bdstanga",
-    images: ["/og-image.jpg"], // Same image as OpenGraph
+    images: ["https://avatars.githubusercontent.com/u/3215078"],
   },
   robots: {
     index: true,
