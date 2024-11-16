@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Experienced tech lead sharing insights on software engineering, leadership, and LLMs. Expert in building and operating high-performing engineering teams.",
   keywords:
-    "Bogdan Stanga, Software Engineering, Tech Leadership, AI, LLM, Engineering Management, CTO, Software Architecture, Team Building, Technical Strategy",
+    "Bogdan Stanga, Software Engineering, Tech Leadership, AI, LLM, Google, Google Search,Engineering Management, CTO, Software Architecture, Team Building, Technical Strategy",
   authors: [{ name: "Bogdan Stanga" }],
   creator: "Bogdan Stanga",
   publisher: "Bogdan Stanga",
@@ -72,7 +72,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function getThemePreference() {
+                  if (typeof localStorage !== 'undefined' && localStorage.getItem('darkMode')) {
+                    return localStorage.getItem('darkMode') === 'true';
+                  }
+                  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+                }
+                
+                if (getThemePreference()) {
+                  document.documentElement.classList.add('dark');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
