@@ -99,7 +99,6 @@ export default function RootLayout({
             `,
           }}
         />
-        <script async src="https://platform.twitter.com/widgets.js"></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-white dark:bg-black text-gray-900 dark:text-white`}
