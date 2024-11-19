@@ -368,7 +368,7 @@ const results = await db.users.find({
         <div className="flex flex-col gap-6">
           <div className="flex flex-col sm:flex-row gap-4 text-sm">
             <ShareButton />
-            <ExternalLink href="https://twitter.com/bdstanga">
+            <ExternalLink href="https://x.com/intent/follow?screen_name=bdstanga">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-900/50 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900/70 transition-colors">
                 <svg
                   className="w-4 h-4"
