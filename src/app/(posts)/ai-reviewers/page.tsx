@@ -38,6 +38,11 @@ export const metadata: Metadata = {
         alt: "AI Code Review Security",
       },
     ],
+    authors: ["Bogdan Stanga"],
+    publishedTime: "2024-11-19T12:00:00.000Z",
+    modifiedTime: "2024-11-19T12:00:00.000Z",
+    section: "AI",
+    tags: ["AI", "Code Review", "Security", "Developer Tools"],
   },
   twitter: {
     card: "summary_large_image",
@@ -48,6 +53,14 @@ export const metadata: Metadata = {
     images: ["https://avatars.githubusercontent.com/u/3215078"],
   },
   authors: [{ name: "Bogdan Stanga", url: "https://bogdanstanga.com" }],
+  category: "Software Development",
+  publisher: "Bogdan Stanga",
+  alternates: {
+    canonical: "https://bogdanstanga.com/ai-reviewers",
+  },
+  other: {
+    "reading-time": "8 minutes",
+  },
 };
 
 export default function AIReviewersPost() {
