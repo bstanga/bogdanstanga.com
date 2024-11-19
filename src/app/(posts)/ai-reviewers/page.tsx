@@ -56,6 +56,23 @@ export default function AIReviewersPost() {
         AI in Code Reviews: Reducing Human Errors and Enhancing Security
       </Title>
 
+      <div className="my-8 p-6 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-100 dark:border-gray-800">
+        <div className="font-semibold text-lg text-gray-900 dark:text-white mb-3">
+          💡 TL;DR{"  "}
+          <span className="text-xs font-normal text-gray-500 dark:text-gray-400">
+            (AI-generated)
+          </span>
+        </div>
+        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+          AI code reviewers excel at catching security vulnerabilities,
+          malicious code, and API key leaks, providing an automated first line
+          of defense before human review. However, they lack understanding of
+          broader system architecture and business context, making them best
+          suited as complementary tools rather than replacements for human
+          expertise.
+        </p>
+      </div>
+
       <Text>
         In the era of LLM-based tools like{" "}
         <ExternalLink href="https://cursor.sh">Cursor</ExternalLink> and{" "}
@@ -346,6 +363,75 @@ const results = await db.users.find({
         allowing human reviewers to focus on architecture, business logic, and
         system-wide implications.
       </Text>
+
+      <div className="mt-16 pt-8 border-t border-gray-100 dark:border-gray-800">
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col sm:flex-row gap-4 text-sm">
+            <ShareButton />
+            <ExternalLink href="https://twitter.com/bdstanga">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-900/50 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900/70 transition-colors">
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                Follow @bdstanga
+              </div>
+            </ExternalLink>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <img
+              src="https://avatars.githubusercontent.com/u/3215078"
+              alt="Bogdan Stanga"
+              className="w-12 h-12 rounded-full"
+            />
+            <div>
+              <h3 className="font-medium text-gray-900 dark:text-white">
+                About the Author
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                Bogdan Stanga is a tech lead and software architect passionate
+                about AI, code quality, and developer productivity. He is
+                currently working as a tech lead of Events on{" "}
+                <ExternalLink href="https://www.google.com">
+                  Google Search
+                </ExternalLink>{" "}
+                and spends the weekends building{" "}
+                <ExternalLink href="http://www.presubmit.ai">
+                  Presubmit.ai
+                </ExternalLink>
+                , a collection of AI-powered open-source tools for developers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </BlogPost>
+  );
+}
+
+function ShareButton() {
+  return (
+    <ExternalLink
+      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+        "Check out how AI can help reduce human errors in code reviews\n\nby @bdstanga"
+      )}&url=${encodeURIComponent("https://bogdanstanga.com/ai-reviewers")}`}
+    >
+      <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
+        <svg
+          className="w-4 h-4"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg>
+        Share on X (Twitter)
+      </div>
+    </ExternalLink>
   );
 }
