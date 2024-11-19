@@ -30,6 +30,5 @@ export function formatDate(publishedTime: string): string {
   return new Date(publishedTime).toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
-    year: "numeric",
   });
 }

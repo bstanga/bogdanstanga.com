@@ -13,10 +13,8 @@ const post = posts.find((p) => p.slug === "ai-reviewers")!;
 const jsonLd = generateArticleJsonLd(post);
 
 export const metadata: Metadata = {
-  title:
-    "AI in Code Reviews: Reducing Human Errors and Enhancing Security | Bogdan Stanga",
-  description:
-    "Learn how AI-powered code reviews can catch security vulnerabilities, prevent bugs, and complement human reviewers. Real examples of how LLMs detect malicious code, API key leaks, and common anti-patterns in pull requests.",
+  title: `${post.title} | Bogdan Stanga`,
+  description: post.description,
   keywords: [
     "LLM code review",
     "AI code reviewer",
@@ -30,9 +28,8 @@ export const metadata: Metadata = {
     "malicious code detection",
   ].join(", "),
   openGraph: {
-    title: "AI in Code Reviews: Reducing Human Errors and Enhancing Security",
-    description:
-      "Discover how AI-powered code reviews can catch security vulnerabilities and complement human reviewers with real-world examples of detecting malicious code and API key leaks.",
+    title: post.title,
+    description: post.description,
     type: "article",
     url: "https://bogdanstanga.com/ai-reviewers",
     images: [
@@ -44,16 +41,15 @@ export const metadata: Metadata = {
       },
     ],
     authors: ["Bogdan Stanga"],
-    publishedTime: "2024-11-19T12:00:00.000Z",
-    modifiedTime: "2024-11-19T12:00:00.000Z",
+    publishedTime: post.publishedTime,
+    modifiedTime: post.modifiedTime,
     section: "AI",
-    tags: ["AI", "Code Review", "Security", "Developer Tools"],
+    tags: post.tags,
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI in Code Reviews: Reducing Human Errors and Enhancing Security",
-    description:
-      "Discover how AI-powered code reviews can catch security vulnerabilities and complement human reviewers with real-world examples of detecting malicious code and API key leaks.",
+    title: post.title,
+    description: post.description,
     creator: "@bdstanga",
     images: ["https://avatars.githubusercontent.com/u/3215078"],
   },
