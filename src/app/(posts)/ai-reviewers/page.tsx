@@ -6,6 +6,11 @@ import { List, ListItem } from "@/components/blog/List";
 import { CodeBlock } from "@/components/CodeBlock";
 import { ExternalLink } from "@/components/blog/ExternalLink";
 import { Tweet } from "@/components/blog/Tweet";
+import { generateArticleJsonLd } from "@/lib/schema";
+import { posts } from "@/data/posts";
+
+const post = posts.find((p) => p.slug === "ai-reviewers")!;
+const jsonLd = generateArticleJsonLd(post);
 
 export const metadata: Metadata = {
   title:
@@ -60,12 +65,17 @@ export const metadata: Metadata = {
   },
   other: {
     "reading-time": "8 minutes",
+    jsonld: JSON.stringify(jsonLd),
   },
 };
 
 export default function AIReviewersPost() {
   return (
     <BlogPost>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Title>
         AI in Code Reviews: Reducing Human Errors and Enhancing Security
       </Title>
