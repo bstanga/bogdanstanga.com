@@ -21,7 +21,7 @@ export default function Home() {
               Bogdan Stanga
             </h1>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed tracking-wide">
-              Engineering leader on{" "}
+              Tech lead on{" "}
               <a
                 href="https://linkedin.com/in/bogdanstanga"
                 className="text-gray-900 dark:text-white hover:opacity-70 transition-opacity font-semibold"
