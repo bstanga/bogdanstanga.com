@@ -7,8 +7,8 @@ export interface Post {
 
 export const posts: Post[] = [
   {
-    title: "Using AI to Reduce Human Errors in Code Reviews",
-    date: "Nov 18",
+    title: "AI in Code Reviews: Reducing Human Errors and Enhancing Security",
+    date: "Nov 17",
     year: 2024,
     slug: "ai-reviewers",
   },

@@ -8,7 +8,8 @@ import { ExternalLink } from "@/components/blog/ExternalLink";
 import { Tweet } from "@/components/blog/Tweet";
 
 export const metadata: Metadata = {
-  title: "Using AI to Reduce Human Errors in Code Reviews | Bogdan Stanga",
+  title:
+    "AI in Code Reviews: Reducing Human Errors and Enhancing Security | Bogdan Stanga",
   description:
     "Learn how AI-powered code reviews can catch security vulnerabilities, prevent bugs, and complement human reviewers. Real examples of how LLMs detect malicious code, API key leaks, and common anti-patterns in pull requests.",
   keywords: [
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     "malicious code detection",
   ].join(", "),
   openGraph: {
-    title: "Using AI to Reduce Human Errors in Code Reviews",
+    title: "AI in Code Reviews: Reducing Human Errors and Enhancing Security",
     description:
       "Discover how AI-powered code reviews can catch security vulnerabilities and complement human reviewers with real-world examples of detecting malicious code and API key leaks.",
     type: "article",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Using AI to Reduce Human Errors in Code Reviews",
+    title: "AI in Code Reviews: Reducing Human Errors and Enhancing Security",
     description:
       "Discover how AI-powered code reviews can catch security vulnerabilities and complement human reviewers with real-world examples of detecting malicious code and API key leaks.",
     creator: "@bdstanga",
@@ -51,7 +52,9 @@ export const metadata: Metadata = {
 export default function AIReviewersPost() {
   return (
     <BlogPost>
-      <Title>Using AI to Reduce Human Errors in Code Reviews</Title>
+      <Title>
+        AI in Code Reviews: Reducing Human Errors and Enhancing Security
+      </Title>
 
       <Text>
         In the era of LLM-based tools like{" "}
