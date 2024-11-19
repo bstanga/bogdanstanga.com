@@ -24,7 +24,8 @@ export function generateArticleJsonLd({
     "@type": "TechArticle",
     headline: title,
     description: description,
-    image: "https://avatars.githubusercontent.com/u/3215078",
+    image:
+      "https://raw.githubusercontent.com/bstanga/bogdanstanga.com/refs/heads/main/assets/ai-reviewer-image.jpg",
     datePublished: publishedTime,
     dateModified: modifiedTime,
     author: {
@@ -32,7 +33,8 @@ export function generateArticleJsonLd({
       name: "Bogdan Stanga",
       url: "https://bogdanstanga.com",
       jobTitle: "Tech Lead",
-      image: "https://avatars.githubusercontent.com/u/3215078",
+      image:
+        "https://raw.githubusercontent.com/bstanga/bogdanstanga.com/refs/heads/main/assets/ai-reviewer-image.jpg",
       sameAs: [
         "https://twitter.com/bdstanga",
         "https://github.com/bstanga",
