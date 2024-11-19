@@ -80,6 +80,8 @@ export function generateBlogJsonLd(articles: ArticleSchema[]) {
       datePublished: article.publishedTime,
       dateModified: article.modifiedTime,
       url: `https://bogdanstanga.com/${article.slug}`,
+      image:
+        "https://raw.githubusercontent.com/bstanga/bogdanstanga.com/refs/heads/main/assets/ai-reviewer-image.jpg",
       author: {
         "@type": "Person",
         name: "Bogdan Stanga",
