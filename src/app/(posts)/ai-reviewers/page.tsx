@@ -416,7 +416,7 @@ const results = await db.users.find({
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                 Bogdan Stanga is a tech lead and software architect passionate
                 about AI, code quality, and developer productivity. He is
-                currently working as a tech lead of Events on{" "}
+                currently working on{" "}
                 <ExternalLink href="https://www.google.com">
                   Google Search
                 </ExternalLink>{" "}
