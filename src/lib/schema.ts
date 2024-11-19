@@ -7,6 +7,7 @@ export interface ArticleSchema {
   tags: string[];
   wordCount: string;
   timeRequired: string;
+  image: string;
 }
 
 export function generateArticleJsonLd({
@@ -18,14 +19,14 @@ export function generateArticleJsonLd({
   tags,
   wordCount,
   timeRequired,
+  image,
 }: ArticleSchema) {
   return {
     "@context": "https://schema.org",
     "@type": "TechArticle",
     headline: title,
     description: description,
-    image:
-      "https://raw.githubusercontent.com/bstanga/bogdanstanga.com/refs/heads/main/assets/ai-reviewer-image.jpg",
+    image: image,
     datePublished: publishedTime,
     dateModified: modifiedTime,
     author: {
@@ -33,8 +34,7 @@ export function generateArticleJsonLd({
       name: "Bogdan Stanga",
       url: "https://bogdanstanga.com",
       jobTitle: "Tech Lead",
-      image:
-        "https://raw.githubusercontent.com/bstanga/bogdanstanga.com/refs/heads/main/assets/ai-reviewer-image.jpg",
+      image: image,
       sameAs: [
         "https://twitter.com/bdstanga",
         "https://github.com/bstanga",
@@ -80,14 +80,13 @@ export function generateBlogJsonLd(articles: ArticleSchema[]) {
       datePublished: article.publishedTime,
       dateModified: article.modifiedTime,
       url: `https://bogdanstanga.com/${article.slug}`,
-      image:
-        "https://raw.githubusercontent.com/bstanga/bogdanstanga.com/refs/heads/main/assets/ai-reviewer-image.jpg",
+      image: article.image,
       author: {
         "@type": "Person",
         name: "Bogdan Stanga",
         url: "https://bogdanstanga.com",
         jobTitle: "Tech Lead",
-        image: "https://avatars.githubusercontent.com/u/3215078",
+        image: article.image,
         sameAs: [
           "https://twitter.com/bdstanga",
           "https://github.com/bstanga",

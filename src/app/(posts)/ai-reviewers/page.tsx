@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     url: "https://bogdanstanga.com/ai-reviewers",
     images: [
       {
-        url: "https://raw.githubusercontent.com/bstanga/bogdanstanga.com/refs/heads/main/assets/ai-reviewer-image.jpg",
+        url: post.image,
         width: 1200,
         height: 630,
         alt: "AI Code Review Security",
@@ -51,9 +51,7 @@ export const metadata: Metadata = {
     title: post.title,
     description: post.description,
     creator: "@bdstanga",
-    images: [
-      "https://raw.githubusercontent.com/bstanga/bogdanstanga.com/refs/heads/main/assets/ai-reviewer-image.jpg",
-    ],
+    images: [post.image],
   },
   authors: [{ name: "Bogdan Stanga", url: "https://bogdanstanga.com" }],
   category: "Software Development",
