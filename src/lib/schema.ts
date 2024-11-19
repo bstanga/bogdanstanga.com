@@ -78,6 +78,18 @@ export function generateBlogJsonLd(articles: ArticleSchema[]) {
       datePublished: article.publishedTime,
       dateModified: article.modifiedTime,
       url: `https://bogdanstanga.com/${article.slug}`,
+      author: {
+        "@type": "Person",
+        name: "Bogdan Stanga",
+        url: "https://bogdanstanga.com",
+        jobTitle: "Tech Lead",
+        image: "https://avatars.githubusercontent.com/u/3215078",
+        sameAs: [
+          "https://twitter.com/bdstanga",
+          "https://github.com/bstanga",
+          "https://www.linkedin.com/in/bogdanstanga",
+        ],
+      },
     })),
   };
 }
