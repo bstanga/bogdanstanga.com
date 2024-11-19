@@ -3,6 +3,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { Footer } from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -77,26 +79,36 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function() {
-                function getThemePreference() {
-                  if (typeof localStorage !== 'undefined' && localStorage.getItem('darkMode')) {
-                    return localStorage.getItem('darkMode') === 'true';
-                  }
-                  return window.matchMedia('(prefers-color-scheme: dark)').matches;
-                }
+              try {
+                let isDark = false;
+                const darkModeStored = localStorage.getItem('darkMode');
                 
-                if (getThemePreference()) {
+                if (darkModeStored !== null) {
+                  isDark = darkModeStored === 'true';
+                } else {
+                  isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  localStorage.setItem('darkMode', String(isDark));
+                }
+
+                if (isDark) {
                   document.documentElement.classList.add('dark');
                 }
-              })();
+              } catch (e) {
+                console.log('Dark mode initialization failed:', e);
+              }
             `,
           }}
         />
+        <script async src="https://platform.twitter.com/widgets.js"></script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-white dark:bg-black text-gray-900 dark:text-white`}
       >
-        {children}
+        <div className="grid grid-rows-[1fr_auto] items-start justify-items-center min-h-screen p-8 sm:p-12 font-[family-name:var(--font-geist-sans)] transition-colors duration-200 bg-white dark:bg-black">
+          <ThemeToggle className="absolute md:fixed top-8 right-8" />
+          {children}
+          <Footer />
+        </div>
         <Analytics />
         <SpeedInsights />
       </body>
