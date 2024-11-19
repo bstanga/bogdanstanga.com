@@ -30,7 +30,8 @@ export default function Home() {
               >
                 Google Search
               </a>
-              , building and scaling high-impact teams that operate at speed.
+              , building, scaling and operating high-impact teams that operate
+              at speed.
               <br />
               <br />
               Also building{" "}
