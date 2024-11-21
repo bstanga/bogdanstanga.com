@@ -19,7 +19,7 @@ export const posts: ArticleSchema[] = [
     wordCount: "1500",
     timeRequired: "PT8M",
     image:
-      "https://raw.githubusercontent.com/bstanga/bogdanstanga.com/refs/heads/main/assets/ai-reviewer-image.jpg",
+      "https://raw.githubusercontent.com/bstanga/bogdanstanga.com/refs/heads/main/assets/ai-reviewer-image-2.jpg",
   },
 ];
 
